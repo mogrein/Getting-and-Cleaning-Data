@@ -45,14 +45,6 @@ write.table(tidyData1,"tidy_data_means_and_stddevs.txt")
 # Create another tidy data set
 tidyData2 <- cbind(dataY, dataSubject, dataX)
 
-# split on activity-subject pairs and count colMeans on this list, then convert it back to dataframe
-#old code, deprecated
-#tidyData2 <- data.frame(sapply(split(tidyData2[,3:ncol(tidyData2)],
-#                               list(tidyData2$activity, tidyData2$subject)),
-#                         colMeans, na.rm=TRUE), stringsAsFactors=TRUE)
-# transpose the dataframe as we need transposed dataframe
-#tinyData <- t(tinyData)
-
 # using aggregate to compute mean for subsets of activity-subject pairs
 tidyData2 <- aggregate(tidyData2[, 3:ncol(tidyData2)],
                                 by=list(tidyData2$activity, tidyData2$subject),
