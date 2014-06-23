@@ -19,3 +19,6 @@ To run this script you need to do the following:
 ```R
 source("../Clean_Data.R")
 ```
+7. At the end of the work you will get two file in the same folder, where the script is: tidy_data_means_and_stddevs.txt (around 9.9 Mb) and tidy_data_means_of_all_columns.txt (around 1.9 Mb)
+
+Script usually runs around 40 seconds, but this time may vary, depending on your machine.
