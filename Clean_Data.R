@@ -47,10 +47,7 @@ tidyData2 <- cbind(dataY, dataSubject, dataX)
 
 # using aggregate to compute mean for subsets of activity-subject pairs
 tidyData2 <- aggregate(tidyData2[, 3:ncol(tidyData2)],
-                                by=list(tidyData2$activity, tidyData2$subject),
+                                by=list(activity=tidyData2$activity,
+                                        subject=tidyData2$subject),
                                 FUN=mean)
-
-# return old names to groups
-names(tidyData2$Group.1) <- "activity"
-names(tidyData2$Group.2) <- "subject"
 write.table(tidyData2,"tidy_data_means_of_all_columns.txt")
