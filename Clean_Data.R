@@ -35,10 +35,10 @@ dataY$activity <- activities[dataY$activity, "name"]
 # Assign name to dataSubject
 names(dataSubject) <- c("subject")
 
-# Get colomn numbers of means and standard deviations using grep
+# Get column numbers of means and standard deviations using grep
 meanAndStdDevNames <- grep("-mean()|-std()", names(dataX))
 
-# Merge data
+# Bind columnsc
 tidyData1 <- cbind(dataY, dataSubject, dataX[,meanAndStdDevNames])
 write.table(tidyData1,"tidy_data_means_and_stddevs.txt")
 
