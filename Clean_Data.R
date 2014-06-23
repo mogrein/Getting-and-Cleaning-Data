@@ -38,7 +38,7 @@ names(dataSubject) <- c("subject")
 # Get column numbers of means and standard deviations using grep
 meanAndStdDevNames <- grep("-mean()|-std()", names(dataX))
 
-# Bind columnsc
+# Bind columns
 tidyData1 <- cbind(dataY, dataSubject, dataX[,meanAndStdDevNames])
 write.table(tidyData1,"tidy_data_means_and_stddevs.txt")
 
