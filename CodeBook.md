@@ -1,4 +1,4 @@
-Step of the work of script:
+Step of the work of the script:
 
 1. Reads the train data from the "train" folder
 2. Reads the test data from the "test" folder
@@ -26,7 +26,7 @@ Data in **tidy_data_means_and_stddevs.txt** is 10299x81 dataframe of the followi
 - The second column is subject number - type = "integer". Contains values from 1 to 30
 - All other column are means and standart deviations of various measures. They have "numeric" data type.
 
-Data in **tidy_data_means_of_all_columns.txt** is 180x561 dataframe. The structure of almostly the same:
+Data in **tidy_data_means_of_all_columns.txt** is 180x563 dataframe. The structure of almostly the same:
 - The first column is activity - type = "charaster" Contains the following values:
   - WALKING
   - WALKING_UPSTAIRS
